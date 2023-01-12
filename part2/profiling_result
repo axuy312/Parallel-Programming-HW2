@@ -1,0 +1,28 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+100.00      4.05     4.05                             mandelbrotSerial(float, float, float, float, int, int, int, int, int, int*)
+  0.00      4.05     0.00       20     0.00     0.00  CycleTimer::secondsPerTick()
+  0.00      4.05     0.00        1     0.00     0.00  verifyResult(int*, int*, int, int)
+
+			Call graph
+
+
+granularity: each sample hit covers 4 byte(s) for 0.25% of 4.05 seconds
+
+index % time    self  children    called     name
+                                                 <spontaneous>
+[1]    100.0    4.05    0.00                 mandelbrotSerial(float, float, float, float, int, int, int, int, int, int*) [1]
+-----------------------------------------------
+                0.00    0.00      20/20          main [7]
+[9]      0.0    0.00    0.00      20         CycleTimer::secondsPerTick() [9]
+-----------------------------------------------
+                0.00    0.00       1/1           main [7]
+[10]     0.0    0.00    0.00       1         verifyResult(int*, int*, int, int) [10]
+-----------------------------------------------
+
+Index by function name
+
+  [10] verifyResult(int*, int*, int, int) [1] mandelbrotSerial(float, float, float, float, int, int, int, int, int, int*) [9] CycleTimer::secondsPerTick()
